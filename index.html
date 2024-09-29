@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Greice Keli Dalmoro</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calcularTempoExperiencia(inicio, fim) {
+            var dataInicial = new Date(inicio);
+            var dataFinal = fim === 'Presente' ? new Date() : new Date(fim);
+
+            var diferencaTempo = dataFinal - dataInicial;
+
+            var diferencaDias = Math.floor(diferencaTempo / (1000 * 60 * 60 * 24));
+            var diferencaMeses = Math.floor(diferencaDias / 30.44);
+            var diferencaAnos = Math.floor(diferencaMeses / 12);
+
+            return diferencaAnos + " anos e " + (diferencaMeses % 12) + " meses";
+        }
+
+        function exibirTempoExperiencia() {
+            document.getElementById("tempo-sunup").innerHTML = calcularTempoExperiencia("2019-06-01", "Presente");
+            document.getElementById("tempo-sulmaq").innerHTML = calcularTempoExperiencia("2008-08-01", "2019-06-01");
+        }
+    </script>
+</head>
+<body onload="exibirTempoExperiencia()"></bodyonload>
+    <header>
+        <h1>Greice Keli Dalmoro</h1>
+        <p>Planejamento Estratégico | Negócios Digitais</p>
+    </header>
+
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Eu sou Greice Keli Dalmoro, formada em Administração de Empresas e Pós-Graduada em Gestão de Projetos. Atualmente cursando Ciências Contábeis e Ciências da Computação. Sou co-proprietária da SUN UP Creative High Performance Agency, cujo principal objetivo é auxiliar empresas a obterem um melhor desempenho no universo digital e de vendas online por meio de estratégias sólidas e eficazes.
+           <br><br>
+           Sou guiada por dados, pois eles me permitem navegar pelo desconhecido, capturar, esclarecer e organizar as empresas com foco na rentabilidade e maior solidez. Preciso falar com pessoas que, assim como eu, respeitam as tradições, mas que, ao mesmo tempo, reconhecem que os tempos mudaram e entendem que a liberdade de pensar em conjunto torna o processo de planejamento estratégico mais preciso e conclusivo.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Experiência</h2>
+        <ul>
+            <li>
+                <h3>SUN UP Creative High Performance®</h3>
+                <p>Planejamento Estratégico e Sócia Fundadora</p>
+                <span>Junho 2019 - Presente</span>
+                <p>Tempo de Experiência: <span id="tempo-sunup"></span></p>
+            </li>
+            <li>
+                <h3>SULMAQ S
+                    A</h3>
+                <p>Analista de Programação</p>
+                <span>Ago 2008 - Jun 2019</span>
+                <p>Tempo de Experiência: <span id="tempo-sulmaq"></span></p>
+            </li>    
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Educação</h2>
+        <ul>
+            <li>
+                <h3>Graduação em Administração</h3>
+                <p>UCS - Universidade de Caxias do Sul</p>
+                <span>Formação concluída em 2017</span>
+            </li>
+            <li>
+                <h3>Pós-Graduação em Gestão de Projetos</h3>
+                <p>UCS - Universidade de Caxias do Sul</p>
+                <span>Formação concluída em 2022</span>
+            </li>    
+            <li>
+                <h3>Especialização em Estratégia de Negócios e Gestão em Marketing</h3>
+                <p>CUOA Business School na Itália</p>
+                <span>Formação concluída em 2023</span>
+            </li>  
+            <li>
+                <h3>Graduação em Ciências Contábeis - Em Andamento</h3>
+                <p>UCS - Universidade de Caxias do Sul</p>
+                <span>Previsão de Formação em 2025</span>
+            </li>
+            <li>
+                <h3>Graduação em Ciência da Computação - Em Andamento</h3>
+                <p>Atitus Educação</p>
+                <span>Formação concluída em 2027</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Marketing Digital</li>
+            <li>Gestão de E-commerce</li>
+            <li>Estratégias de Mídia Paga</li>
+            <li>Branding</li>
+            <li>Gestão de Projetos</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Telefone: <a href="mailto:greice@esunupadv.com">(54) 99637.5243</a></p>
+        <p>Email: <a href="mailto:greice@esunupadv.com">greice@sunupadv.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/greice-dalmoro-37249163/" target="_blank">linkedin.com/in/greice-dalmoro</a></p>
+        
+    </section>
+
+    <footer>
+        <p>© 2024 Greice Dalmoro - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

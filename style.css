@@ -7,10 +7,14 @@ body {
 }
 
 header {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
+    display: flex;
+    flex-direction: column; /* Alinha itens na coluna */
+    align-items: center; /* Centraliza os itens dentro do header */
+    text-align: center; /* Centraliza o texto */
+    background-color: #333; /* Cor de fundo cinza do header */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+    color: white; /* Cor da fonte branca */
 }
 
 header h1 {
@@ -68,4 +72,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+img {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 100px; /* Ajuste conforme necessário */
+    border-radius: 50%; /* Torna a imagem redonda */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
 }
